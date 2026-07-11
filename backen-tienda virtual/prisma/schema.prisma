@@ -1,0 +1,22 @@
+datasource db {
+  provider = "postgresql"
+  
+}
+model user {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  documentoId Int @unique
+  postJob String
+  verifyEmail   Boolean  @default(true)
+  active    Boolean  @default(true)
+  roleId  Int
+  
+}
+
+model role {
+  id   Int    @id @default(autoincrement())
+  name String
+}
+
