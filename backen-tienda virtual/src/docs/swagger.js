@@ -37,11 +37,12 @@ const swaggerOptions = {
     },
 
     apis: [
-        path.join(__dirname, "../routes/*.js"),
+          "./src/routes/*.js",
     ],
 };
 
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
+
 
 console.log("Swagger encontró estas rutas:");
 console.log(swaggerSpec.paths);
